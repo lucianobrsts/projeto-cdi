@@ -11,8 +11,25 @@
 	</h:head>
 	
 	<h:body>
-		<h1>Bem-vindo ao Teste CDI</h1>
+		<f:event listener="" type="preRenderView" />
+		
+		<h:form id="formPessoa">
+			<h:panelGrid columns="3">
+				<p:outputLabel value="Nome:" />
+				<p:inputText value="" />
+				<p:commandButton value="Salvar" actionListener="" update="" />
+			</h:panelGrid>
+			
+			<p:dataTable>
+				<p:column>
+					<h:outputText value="" />
+				</p:column>
+
+				<p:column>
+					<h:outputText value="" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
 	</h:body>
-	
 </html>
 	
