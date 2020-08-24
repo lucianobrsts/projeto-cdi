@@ -2,6 +2,7 @@ package br.com.testecdi.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
@@ -9,6 +10,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
+@Table(name = "pessoa")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Pessoa extends AbstractEntity {
