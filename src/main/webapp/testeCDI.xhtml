@@ -11,22 +11,22 @@
 	</h:head>
 	
 	<h:body>
-		<f:event listener="" type="preRenderView" />
+		<f:event listener="#{pessoaBean.consultar}" type="preRenderView" />
 		
 		<h:form id="formPessoa">
 			<h:panelGrid columns="3">
 				<p:outputLabel value="Nome:" />
-				<p:inputText value="" />
-				<p:commandButton value="Salvar" actionListener="" update="" />
+				<p:inputText value="#{pessoaBean.pessoaCadastro.nome}" />
+				<p:commandButton value="Salvar" actionListener="#{pessoaBean.salvar}" update=":formPessoa" />
 			</h:panelGrid>
 			
-			<p:dataTable>
-				<p:column>
-					<h:outputText value="" />
+			<p:dataTable id="tabelaPessoa" value="#{pessoaBean.listaPessoas}" var="pessoa">
+				<p:column headerText="Codigo">
+					<h:outputText value="#{pessoa.codigo}" />
 				</p:column>
 
-				<p:column>
-					<h:outputText value="" />
+				<p:column headerText="Nome">
+					<h:outputText value="#{pessoa.nome}" />
 				</p:column>
 			</p:dataTable>
 		</h:form>
