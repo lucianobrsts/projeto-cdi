@@ -33,7 +33,7 @@ public class PessoaRepository implements Serializable {
 	}
 	
 	public List<Pessoa> todos() {
-		TypedQuery<Pessoa> query = manager.createQuery("from Pesspa", Pessoa.class);
+		TypedQuery<Pessoa> query = manager.createQuery("from Pessoa", Pessoa.class);
 		return query.getResultList();
 	}
 
