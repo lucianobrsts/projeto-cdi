@@ -17,7 +17,7 @@ public class AbstractEntity implements Serializable {
 	private static final long serialVersionUID = -7143167724944850962L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "codigo")
 	private Long codigo;
 
