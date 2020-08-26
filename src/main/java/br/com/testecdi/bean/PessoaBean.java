@@ -32,11 +32,6 @@ public class PessoaBean implements Serializable {
 
 	@Transactional
 	public void salvar() throws NegocioException {
-		System.out.println("--------------------------------------");
-		System.out.println(pessoaCadastro.getCodigo());
-		System.out.println(pessoaCadastro.getNome());
-		System.out.println("--------------------------------------");
-		
 		this.pessoaRepository.salvar(pessoaCadastro);
 		this.pessoaCadastro = new Pessoa();
 		FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO, "Endereço salvo com sucesso!");
